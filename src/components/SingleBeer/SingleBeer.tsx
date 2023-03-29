@@ -17,11 +17,11 @@ export const BeerItem: React.FC<{ data: SingleBeerData[] }> = ({ data }) => {
       {data.map((el: any) => {
         return (
           <>
-            <p>Beer name: {el.name}</p>
-            <p>{el.tagline}</p>
-            <p>Descritpion: {el.description}</p>
-            <p>ABV: {el.abv}</p>
-            <p>IBU: {el.ibu}</p>
+            {el.name && <p>Beer name: {el.name}</p>}
+            {el.tagline && <p>{el.tagline}</p>}
+            {el.description && <p>Descritpion: {el.description}</p>}
+            {el.abv && <p>ABV: {el.abv}</p>}
+            {el.ibu && <p>IBU: {el.ibu}</p>}
           </>
         );
       })}

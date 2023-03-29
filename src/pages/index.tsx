@@ -44,23 +44,26 @@ export default function Home() {
               <>
                 <div key={`post-${e.id}`}>
                   <Link
+                    legacyBehavior
                     href={{
                       pathname: ROUTE_POST_ID,
                       query: { id: e.id },
                     }}
                     className={styles.link}
                   >
-                    <div className={styles.itemBox}>
-                      <h2>{e.name}</h2>
-                      <Image
-                        loader={myLoader}
-                        src={e.image_url}
-                        alt={e.name}
-                        width={50}
-                        height={160}
-                      />
-                      <p>{e.tagline}</p>
-                    </div>
+                    <a className={styles.xxx} target="_blank" rel="noopener noreferrer">
+                      <div className={styles.itemBox}>
+                        <h2>{e.name}</h2>
+                        <Image
+                          loader={myLoader}
+                          src={e.image_url}
+                          alt={e.name}
+                          width={50}
+                          height={160}
+                        />
+                        <p>{e.tagline}</p>
+                      </div>
+                    </a>
                   </Link>
                 </div>
               </>
