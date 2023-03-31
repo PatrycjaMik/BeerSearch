@@ -27,9 +27,6 @@ export async function getStaticProps(context: GetStaticPropsContext) {
     const { data: singleBeerResult } = await axios.get<
       AxiosResponse<SingleBeerData>
     >(`https://api.punkapi.com/v2/beers/${page}`);
-    {
-      console.log(singleBeerResult);
-    }
     return {
       props: {
         singleBeer: singleBeerResult,

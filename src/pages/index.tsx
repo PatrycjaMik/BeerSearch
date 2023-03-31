@@ -10,7 +10,7 @@ export default function Home() {
     return `${src}`;
   };
 
-  const [data, setData] = useState();
+  const [data, setData] = useState<any[]>([]);
   const [isLoading, setLoading] = useState(false);
 
   const [pageId, setPageId] = React.useState(1);
@@ -37,7 +37,7 @@ export default function Home() {
   return (
     <>
       <div className={styles.container}>
-        <h1>Find your favourite beer and enjoy the day!</h1>
+        <h1>Find your favourite beer</h1>
         <div className={styles.wrapper}>
           {data.map((e: any) => {
             return (
@@ -51,7 +51,11 @@ export default function Home() {
                     }}
                     className={styles.link}
                   >
-                    <a className={styles.xxx} target="_blank" rel="noopener noreferrer">
+                    <a
+                      className={styles.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
                       <div className={styles.itemBox}>
                         <h2>{e.name}</h2>
                         <Image

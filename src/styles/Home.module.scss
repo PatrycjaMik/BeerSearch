@@ -1,5 +1,4 @@
 @import "variables";
-@import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&family=Poppins:wght@300;500;600;700&family=Quicksand:wght@300;400;500;600;700&display=swap");
 
 .container {
   max-width: 1700px;
@@ -27,13 +26,20 @@
   width: 250px;
   height: 320px;
   padding: 20px;
-  margin: 20px;
-  border: 2px solid $color-primary;
+  margin: 15px 10px;
+  border: 1px solid $color-primary;
   border-radius: 15px;
+  background-color: $color-white;
+
+  &:hover {
+    box-shadow: 5px 10px #888888;
+    background-color: $color-white;
+  }
 
   h2 {
     font-family: "Lato";
     font-weight: 700;
+    margin-bottom: 15px;
   }
   p {
     font-family: "Lato";
@@ -46,15 +52,10 @@
   color: inherit;
 }
 
-.xxx {
-  text-decoration: none;
-  color: inherit;
-}
-
 //loader
 
 .loader {
-  border: 16px solid #f3f3f3;
+  border: 16px solid $color-white;
   border-top: 16px solid #3498db;
   border-radius: 50%;
   width: 120px;
@@ -73,23 +74,30 @@
 
 //pagination
 .pagination {
-  width: 100%;
+  max-width: 300px;
   display: flex;
   justify-content: center;
   align-items: center;
 
   button {
-    border-radius: 10px;
-    width: 80px;
+    border-radius: 5px;
+    width: 90px;
     height: 30px;
-    margin: 0 10px;
+    margin: 5px 10px;
     padding: 5px 15px;
-    background-color: black;
-    color: #fff;
+    background-color: $color-black;
+    color: $color-white;
     &:hover {
-      background-color: #fff;
-      color: black;
+      background-color: $color-white;
+      color: $color-black;
       cursor: pointer;
     }
+  }
+
+  p {
+    font-family: "Lato";
+    font-weight: 700;
+    line-height: 1.2;
+    font-size: 16px;
   }
 }
